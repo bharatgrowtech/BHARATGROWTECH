@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>BharatGrowTech – Best Budget Gadgets in India</title>
+<meta name="description" content="Buy top quality budget gadgets online in India. COD available. Fast delivery all over India."/>
+
+
+<style>
+/*<![CDATA[*/
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&amp;family=DM+Sans:wght@400;500&amp;display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --primary:#0A0F1E;
+  --accent:#00C6FF;
+  --accent2:#FF6B35;
+  --card-bg:#0D1520;
+  --text:#F0F4FF;
+  --muted:#8B9CB0;
+  --green:#22c55e;
+  --border:rgba(255,255,255,0.07);
+}
+body{background:var(--primary);color:var(--text);font-family:Arial,sans-serif;font-size:15px;}
+h1,h2,h3,.price{font-family:'Georgia',serif;}
+a{text-decoration:none;}
+
+nav{background:#060B17;border-bottom:1px solid rgba(0,198,255,0.12);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;}
+.logo{font-family:'Georgia',serif;font-size:22px;font-weight:700;color:var(--accent);letter-spacing:1px;}
+.logo span{color:var(--accent2);}
+.nav-links{display:flex;gap:20px;font-size:14px;}
+.nav-links a{color:var(--muted);transition:color .2s;}
+.nav-links a:hover{color:var(--accent);}
+
+.hero{padding:56px 24px 44px;text-align:center;background:radial-gradient(ellipse at 50% 0%,rgba(0,198,255,0.07) 0%,transparent 65%);}
+.hero-tag{display:inline-block;background:rgba(0,198,255,0.08);color:var(--accent);border:1px solid rgba(0,198,255,0.2);padding:5px 14px;border-radius:20px;font-size:12px;letter-spacing:1px;margin-bottom:16px;}
+.hero h1{font-size:40px;font-weight:700;line-height:1.15;margin-bottom:12px;}
+.hero h1 span{color:var(--accent);}
+.hero p{color:var(--muted);font-size:15px;max-width:460px;margin:0 auto 20px;line-height:1.7;}
+.trust-bar{display:flex;gap:20px;justify-content:center;margin-top:28px;flex-wrap:wrap;}
+.trust-item{font-size:13px;color:var(--muted);}
+
+.section{padding:44px 24px;}
+.section-title{font-size:26px;font-weight:700;margin-bottom:6px;}
+.accent-line{width:36px;height:3px;background:var(--accent);border-radius:2px;margin:8px 0 24px;}
+
+.products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;}
+.product-card{background:var(--card-bg);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:transform .2s,border-color .2s;cursor:pointer;}
+.product-card:hover{transform:translateY(-4px);border-color:rgba(0,198,255,0.3);}
+.product-img{width:100%;height:155px;display:flex;align-items:center;justify-content:center;font-size:52px;background:linear-gradient(135deg,#0a1628,#0d1f3c);}
+.product-info{padding:14px;}
+.product-name{font-size:14px;font-weight:500;margin-bottom:4px;line-height:1.4;}
+.product-desc{font-size:12px;color:var(--muted);margin-bottom:10px;line-height:1.5;}
+.product-price{display:flex;align-items:center;gap:8px;margin-bottom:12px;}
+.price{font-size:20px;font-weight:700;color:var(--accent);}
+.price-old{font-size:12px;color:var(--muted);text-decoration:line-through;}
+.badge{background:rgba(255,107,53,0.12);color:var(--accent2);font-size:10px;padding:2px 7px;border-radius:4px;border:1px solid rgba(255,107,53,0.2);}
+.tag-new{display:inline-block;background:rgba(0,198,255,0.1);color:var(--accent);font-size:10px;padding:2px 7px;border-radius:4px;border:1px solid rgba(0,198,255,0.18);margin-bottom:6px;}
+.btn-buy{width:100%;background:var(--accent);color:#000;border:none;padding:10px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;font-family:Arial,sans-serif;transition:opacity .2s;}
+.btn-buy:hover{opacity:0.88;}
+
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:999;align-items:center;justify-content:center;padding:16px;}
+.modal-overlay.active{display:flex;}
+.modal{background:#0D1520;border:1px solid rgba(0,198,255,0.18);border-radius:16px;width:100%;max-width:480px;max-height:90vh;overflow-y:auto;padding:28px 24px;position:relative;}
+.modal-close{position:absolute;top:16px;right:16px;background:rgba(255,255,255,0.07);border:none;color:var(--text);width:30px;height:30px;border-radius:50%;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;}
+.modal-product{display:flex;align-items:center;gap:14px;margin-bottom:20px;padding-bottom:18px;border-bottom:1px solid var(--border);}
+.modal-emoji{font-size:36px;width:60px;height:60px;background:linear-gradient(135deg,#0a1628,#0d1f3c);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.modal-pname{font-size:15px;font-weight:500;margin-bottom:4px;}
+.modal-pprice{font-family:'Georgia',serif;font-size:20px;font-weight:700;color:var(--accent);}
+.modal h2{font-size:18px;font-weight:600;margin-bottom:18px;}
+
+.form-group{margin-bottom:14px;}
+.form-label{font-size:12px;color:var(--muted);margin-bottom:6px;display:block;font-weight:500;letter-spacing:0.03em;}
+.form-input{width:100%;background:#060B17;border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:10px 14px;font-size:14px;color:var(--text);font-family:Arial,sans-serif;outline:none;transition:border-color .2s;}
+.form-input:focus{border-color:rgba(0,198,255,0.45);}
+.form-input::placeholder{color:var(--muted);}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.qty-control{display:flex;align-items:center;border:1px solid rgba(255,255,255,0.1);border-radius:8px;overflow:hidden;background:#060B17;}
+.qty-btn{background:rgba(0,198,255,0.08);border:none;color:var(--accent);width:38px;height:40px;font-size:18px;cursor:pointer;font-weight:600;transition:background .2s;}
+.qty-btn:hover{background:rgba(0,198,255,0.18);}
+.qty-val{flex:1;text-align:center;font-size:15px;font-weight:500;color:var(--text);}
+.total-box{background:#060B17;border:1px solid rgba(0,198,255,0.15);border-radius:10px;padding:14px 16px;margin:18px 0;display:flex;justify-content:space-between;align-items:center;}
+.total-label{font-size:13px;color:var(--muted);}
+.total-amount{font-family:'Georgia',serif;font-size:22px;font-weight:700;color:var(--accent);}
+.btn-submit{width:100%;background:var(--green);color:#fff;border:none;padding:13px;border-radius:10px;font-size:15px;font-weight:600;cursor:pointer;font-family:Arial,sans-serif;transition:opacity .2s;}
+.btn-submit:hover{opacity:0.88;}
+.btn-submit:disabled{opacity:0.6;cursor:not-allowed;}
+.cod-badge{display:flex;align-items:center;justify-content:center;gap:6px;margin-top:10px;font-size:12px;color:var(--muted);}
+
+.success-screen{display:none;text-align:center;padding:20px 0;}
+.success-icon{font-size:56px;margin-bottom:14px;}
+.success-title{font-size:22px;font-weight:700;color:var(--green);margin-bottom:8px;}
+.success-desc{font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;}
+.order-details{background:#060B17;border:1px solid var(--border);border-radius:10px;padding:14px 16px;text-align:left;font-size:13px;line-height:2;}
+.order-details span{color:var(--muted);}
+.btn-close-success{background:var(--accent);color:#000;border:none;padding:11px 28px;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;font-family:Arial,sans-serif;margin-top:18px;}
+
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px;}
+.feature-card{background:var(--card-bg);border:1px solid var(--border);border-radius:12px;padding:18px;text-align:center;}
+.feature-icon{font-size:26px;margin-bottom:10px;}
+.feature-title{font-size:14px;font-weight:500;margin-bottom:5px;}
+.feature-desc{font-size:12px;color:var(--muted);line-height:1.6;}
+
+footer{background:#060B17;padding:22px;text-align:center;font-size:13px;color:var(--muted);border-top:1px solid var(--border);}
+footer a{color:var(--accent);}
+
+@media(max-width:520px){
+  .hero h1{font-size:28px;}
+  .nav-links{display:none;}
+  .form-row{grid-template-columns:1fr;}
+  .modal{padding:22px 16px;}
+}
+/*]]>*/
+</style>
+</head>
+<body>
+
+
+<nav>
+  <div class="logo">BharatGrow<span>Tech</span></div>
+  <div class="nav-links">
+    <a href="#">Home</a>
+    <a href="#products">Products</a>
+    <a href="#why-us">Why Us</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-tag">🇮🇳 ALL INDIA DELIVERY</div>
+  <h1>Best Budget <span>Gadgets</span><br/>Delivered to Your Door</h1>
+  <p>Top-quality tech accessories at unbeatable prices. COD available. Fast shipping across India.</p>
+  <div class="trust-bar">
+    <div class="trust-item">🚚 Free Delivery</div>
+    <div class="trust-item">💵 COD Available</div>
+    <div class="trust-item">🛡️ Easy Returns</div>
+    <div class="trust-item">⭐ 4.8★ Rated</div>
+  </div>
+</div>
+
+<div class="section" id="products">
+  <div class="section-title">Hot Products 🔥</div>
+  <div class="accent-line"></div>
+  <div class="products-grid">
+
+    <div class="product-card" onclick="openOrder('Wireless Bluetooth Earbuds','🎧',499)">
+      <div class="product-img">🎧</div>
+      <div class="product-info">
+        <span class="tag-new">NEW</span>
+        <div class="product-name">Wireless Bluetooth Earbuds</div>
+        <div class="product-desc">40hr battery • Noise cancel • Deep bass</div>
+        <div class="product-price">
+          <span class="price">₹499</span>
+          <span class="price-old">₹999</span>
+          <span class="badge">50% OFF</span>
+        </div>
+        <button class="btn-buy" onclick="event.stopPropagation();openOrder('Wireless Bluetooth Earbuds','🎧',499)">🛒 Buy Now</button>
+      </div>
+    </div>
+
+    <div class="product-card" onclick="openOrder('Smart Fitness Band','⌚',699)">
+      <div class="product-img">⌚</div>
+      <div class="product-info">
+        <span class="tag-new">POPULAR</span>
+        <div class="product-name">Smart Fitness Band</div>
+        <div class="product-desc">HR monitor • Steps • Sleep tracker</div>
+        <div class="product-price">
+          <span class="price">₹699</span>
+          <span class="price-old">₹1,499</span>
+          <span class="badge">53% OFF</span>
+        </div>
+        <button class="btn-buy" onclick="event.stopPropagation();openOrder('Smart Fitness Band','⌚',699)">🛒 Buy Now</button>
+      </div>
+    </div>
+
+    <div class="product-card" onclick="openOrder('Magnetic Charging Cable','🔌',249)">
+      <div class="product-img">🔌</div>
+      <div class="product-info">
+        <div class="product-name">Magnetic Charging Cable</div>
+        <div class="product-desc">3-in-1 • Fast charge • Tangle-free</div>
+        <div class="product-price">
+          <span class="price">₹249</span>
+          <span class="price-old">₹599</span>
+          <span class="badge">58% OFF</span>
+        </div>
+        <button class="btn-buy" onclick="event.stopPropagation();openOrder('Magnetic Charging Cable','🔌',249)">🛒 Buy Now</button>
+      </div>
+    </div>
+
+    <div class="product-card" onclick="openOrder('Car Phone Mount','📱',199)">
+      <div class="product-img">📱</div>
+      <div class="product-info">
+        <div class="product-name">Car Phone Mount</div>
+        <div class="product-desc">360° rotate • Universal fit • Magnetic</div>
+        <div class="product-price">
+          <span class="price">₹199</span>
+          <span class="price-old">₹449</span>
+          <span class="badge">55% OFF</span>
+        </div>
+        <button class="btn-buy" onclick="event.stopPropagation();openOrder('Car Phone Mount','📱',199)">🛒 Buy Now</button>
+      </div>
+    </div>
+
+    <div class="product-card" onclick="openOrder('LED Desk Lamp','💡',599)">
+      <div class="product-img">💡</div>
+      <div class="product-info">
+        <div class="product-name">LED Desk Lamp</div>
+        <div class="product-desc">Touch dimmer • USB charge port • Eye care</div>
+        <div class="product-price">
+          <span class="price">₹599</span>
+          <span class="price-old">₹1,199</span>
+          <span class="badge">50% OFF</span>
+        </div>
+        <button class="btn-buy" onclick="event.stopPropagation();openOrder('LED Desk Lamp','💡',599)">🛒 Buy Now</button>
+      </div>
+    </div>
+
+    <div class="product-card" onclick="openOrder('10000mAh Power Bank','🔋',799)">
+      <div class="product-img">🔋</div>
+      <div class="product-info">
+        <span class="tag-new">HOT</span>
+        <div class="product-name">10000mAh Power Bank</div>
+        <div class="product-desc">Slim design • 2 USB ports • LED indicator</div>
+        <div class="product-price">
+          <span class="price">₹799</span>
+          <span class="price-old">₹1,599</span>
+          <span class="badge">50% OFF</span>
+        </div>
+        <button class="btn-buy" onclick="event.stopPropagation();openOrder('10000mAh Power Bank','🔋',799)">🛒 Buy Now</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="section" id="why-us" style="padding-top:0;">
+  <div class="section-title">Why Shop With Us?</div>
+  <div class="accent-line"></div>
+  <div class="features">
+    <div class="feature-card">
+      <div class="feature-icon">🚚</div>
+      <div class="feature-title">Fast Delivery</div>
+      <div class="feature-desc">3–7 days delivery across all India.</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">💵</div>
+      <div class="feature-title">COD Available</div>
+      <div class="feature-desc">Pay when your order arrives at your door.</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🔄</div>
+      <div class="feature-title">Easy Returns</div>
+      <div class="feature-desc">7-day return policy. No questions asked.</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🔒</div>
+      <div class="feature-title">Safe &amp; Secure</div>
+      <div class="feature-desc">Your details are always private and safe.</div>
+    </div>
+  </div>
+</div>
+
+<footer id="contact">
+  © 2024 BharatGrowTech &amp;nbsp;|&amp;nbsp; All India Delivery &amp;nbsp;|&amp;nbsp;
+  <a href="#">Privacy Policy</a> &amp;nbsp;|&amp;nbsp; Made with ❤️ in India
+</footer>
+
+<!-- ORDER MODAL -->
+<div class="modal-overlay" id="modalOverlay" onclick="handleOverlayClick(event)">
+  <div class="modal" id="modalBox">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+
+    <div id="orderForm">
+      <div class="modal-product">
+        <div class="modal-emoji" id="mEmoji">🎧</div>
+        <div>
+          <div class="modal-pname" id="mName">Product Name</div>
+          <div class="modal-pprice" id="mPrice">₹499</div>
+        </div>
+      </div>
+
+      <h2>📦 Complete Your Order</h2>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">Full Name *</label>
+          <input class="form-input" id="fName" type="text" placeholder="Rahul Kumar"/>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Mobile Number *</label>
+          <input class="form-input" id="fPhone" type="tel" maxlength="10" placeholder="9876543210"/>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Full Address *</label>
+        <textarea class="form-input" id="fAddress" rows="2" placeholder="House No, Street, Area, Landmark..."></textarea>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">State *</label>
+          <select class="form-input" id="fState">
+            <option value="">-- Select State --</option>
+            <option>Andhra Pradesh</option>
+            <option>Arunachal Pradesh</option>
+            <option>Assam</option>
+            <option>Bihar</option>
+            <option>Chhattisgarh</option>
+            <option>Goa</option>
+            <option>Gujarat</option>
+            <option>Haryana</option>
+            <option>Himachal Pradesh</option>
+            <option>Jharkhand</option>
+            <option>Karnataka</option>
+            <option>Kerala</option>
+            <option>Madhya Pradesh</option>
+            <option>Maharashtra</option>
+            <option>Manipur</option>
+            <option>Meghalaya</option>
+            <option>Mizoram</option>
+            <option>Nagaland</option>
+            <option>Odisha</option>
+            <option>Punjab</option>
+            <option>Rajasthan</option>
+            <option>Sikkim</option>
+            <option>Tamil Nadu</option>
+            <option>Telangana</option>
+            <option>Tripura</option>
+            <option>Uttar Pradesh</option>
+            <option>Uttarakhand</option>
+            <option>West Bengal</option>
+            <option>Andaman and Nicobar Islands</option>
+            <option>Chandigarh</option>
+            <option>Dadra and Nagar Haveli and Daman and Diu</option>
+            <option>Delhi</option>
+            <option>Jammu and Kashmir</option>
+            <option>Ladakh</option>
+            <option>Lakshadweep</option>
+            <option>Puducherry</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">City *</label>
+          <input class="form-input" id="fCity" type="text" placeholder="Enter your city"/>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">PIN Code *</label>
+          <input class="form-input" id="fPin" type="text" maxlength="6" placeholder="800001"/>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Quantity</label>
+          <div class="qty-control">
+            <button class="qty-btn" onclick="changeQty(-1)">−</button>
+            <span class="qty-val" id="qtyVal">1</span>
+            <button class="qty-btn" onclick="changeQty(1)">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Payment Method</label>
+        <select class="form-input" id="fPayment">
+          <option value="COD">Cash on Delivery (COD)</option>
+          <option value="UPI">UPI / Online Payment</option>
+        </select>
+      </div>
+
+      <div class="total-box">
+        <div>
+          <div class="total-label">Order Total</div>
+          <div style="font-size:11px;color:var(--muted);margin-top:2px;">Incl. free delivery</div>
+        </div>
+        <div class="total-amount" id="totalAmount">₹499</div>
+      </div>
+
+      <button class="btn-submit" id="placeBtn" onclick="submitOrder()">✅ Place Order</button>
+      <div class="cod-badge">🔒 Secure Order &amp;nbsp;•&amp;nbsp; Free Delivery &amp;nbsp;•&amp;nbsp; Easy Returns</div>
+    </div>
+
+    <div class="success-screen" id="successScreen">
+      <div class="success-icon">🎉</div>
+      <div class="success-title">Order Placed!</div>
+      <div class="success-desc">Thank you! Your order has been received.<br/>You will get a confirmation call within 24 hours.</div>
+      <div class="order-details" id="orderSummary"></div>
+      <button class="btn-close-success" onclick="closeModal()">Continue Shopping</button>
+    </div>
+
+  </div>
+</div>
+
+<script>
+//<![CDATA[
+var currentProduct = {name:'',emoji:'',price:0};
+var qty = 1;
+
+function openOrder(name, emoji, price){
+  currentProduct = {name:name, emoji:emoji, price:price};
+  qty = 1;
+  document.getElementById('mName').textContent = name;
+  document.getElementById('mEmoji').textContent = emoji;
+  document.getElementById('mPrice').textContent = '₹' + price;
+  document.getElementById('qtyVal').textContent = 1;
+  document.getElementById('totalAmount').textContent = '₹' + price;
+  document.getElementById('orderForm').style.display = 'block';
+  document.getElementById('successScreen').style.display = 'none';
+  var btn = document.getElementById('placeBtn');
+  btn.disabled = false;
+  btn.textContent = '✅ Place Order';
+  document.getElementById('modalOverlay').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal(){
+  document.getElementById('modalOverlay').classList.remove('active');
+  document.body.style.overflow = '';
+  clearForm();
+}
+
+function handleOverlayClick(e){
+  if(e.target === document.getElementById('modalOverlay')) closeModal();
+}
+
+function changeQty(delta){
+  qty = Math.max(1, Math.min(10, qty + delta));
+  document.getElementById('qtyVal').textContent = qty;
+  document.getElementById('totalAmount').textContent = '₹' + (currentProduct.price * qty);
+}
+
+function clearForm(){
+  ['fName','fPhone','fAddress','fCity','fPin'].forEach(function(id){
+    document.getElementById(id).value = '';
+  });
+  document.getElementById('fState').selectedIndex = 0;
+  document.getElementById('fPayment').selectedIndex = 0;
+}
+
+function submitOrder(){
+  var name    = document.getElementById('fName').value.trim();
+  var phone   = document.getElementById('fPhone').value.trim();
+  var address = document.getElementById('fAddress').value.trim();
+  var city    = document.getElementById('fCity').value.trim();
+  var state   = document.getElementById('fState').value;
+  var pin     = document.getElementById('fPin').value.trim();
+  var payment = document.getElementById('fPayment').value;
+
+  if(!name || !phone || !address || !city || !state || !pin){
+    alert('Please fill all required fields marked with *');
+    return;
+  }
+  var phoneRegex = /^[6-9]\d{9}$/;
+  var allSame = /^(\d)\1{9}$/.test(phone);
+  if(!phoneRegex.test(phone) || allSame){
+    alert('Please enter a valid Indian mobile number (must start with 6, 7, 8 or 9 and not all same digits)');
+    return;
+  }
+  if(pin.length !== 6 || isNaN(pin)){
+    alert('Please enter a valid 6-digit PIN code');
+    return;
+  }
+
+  var orderId = 'BGT' + Date.now().toString().slice(-6);
+  var total = currentProduct.price * qty;
+
+  var btn = document.getElementById('placeBtn');
+  btn.disabled = true;
+  btn.textContent = '⏳ Placing Order...';
+
+  
+  
+  var FORMSPREE_ID = 'YOUR_FORMSPREE_ID';
+
+  fetch('https://formspree.io/f/' + FORMSPREE_ID, {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
+    body: JSON.stringify({
+      _subject:  '🛒 New Order ' + orderId + ' - BharatGrowTech',
+      order_id:  orderId,
+      product:   currentProduct.emoji + ' ' + currentProduct.name,
+      quantity:  qty,
+      total:     '₹' + total,
+      payment:   payment,
+      name:      name,
+      mobile:    phone,
+      address:   address,
+      city:      city,
+      state:     state,
+      pincode:   pin
+    })
+  })
+  .then(function(){ showSuccess(orderId, name, phone, address, city, state, pin, payment, total); })
+  .catch(function(){ showSuccess(orderId, name, phone, address, city, state, pin, payment, total); });
+}
+
+function showSuccess(orderId, name, phone, address, city, state, pin, payment, total){
+  document.getElementById('orderForm').style.display = 'none';
+  document.getElementById('successScreen').style.display = 'block';
+  document.getElementById('orderSummary').innerHTML =
+    '<span>Order ID</span> &amp;nbsp; ' + orderId + '<br/>' +
+    '<span>Product</span> &amp;nbsp; ' + currentProduct.emoji + ' ' + currentProduct.name + '<br/>' +
+    '<span>Quantity</span> &amp;nbsp; ' + qty + '<br/>' +
+    '<span>Total</span> &amp;nbsp; ₹' + total + '<br/>' +
+    '<span>Payment</span> &amp;nbsp; ' + payment + '<br/>' +
+    '<span>Name</span> &amp;nbsp; ' + name + '<br/>' +
+    '<span>Mobile</span> &amp;nbsp; ' + phone + '<br/>' +
+    '<span>Address</span> &amp;nbsp; ' + address + ', ' + city + ', ' + state + ' - ' + pin;
+}
+//]]>
+</script>
+</body>
+</html>
