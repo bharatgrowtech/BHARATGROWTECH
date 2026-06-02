@@ -465,48 +465,29 @@ function submitOrder(){
   btn.disabled = true;
   btn.textContent = '⏳ Placing Order...';
 
-  // ── GOOGLE FORMS INTEGRATION (iframe method - works without CORS issues) ──
-  var FORM_ID = '1FAIpQLScyHujFWHOOPREn_2hK0ZKOT_b0iFEuHQF2hth_eKhzIDkxJw';
+  // ── GOOGLE APPS SCRIPT INTEGRATION ──
+  var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyD_XiOeKDKU1CvgxYx6kYFBlXWIbPNZksBtsDqTuuHNfhyhc3WsTTWXyKnR0HWmcWnLw/exec';
 
-  // Build a hidden form and submit it inside a hidden iframe
-  var iframe = document.createElement('iframe');
-  iframe.name = 'hidden_iframe';
-  iframe.style.display = 'none';
-  document.body.appendChild(iframe);
-
-  var hiddenForm = document.createElement('form');
-  hiddenForm.method = 'POST';
-  hiddenForm.action = 'https://docs.google.com/forms/d/e/' + FORM_ID + '/formResponse';
-  hiddenForm.target = 'hidden_iframe';
-
-  var fields = {
-    'entry.2005620554': name,
-    'entry.1166974658': phone,
-    'entry.1930531284': state,
-    'entry.1965978034': city,
-    'entry.1820389809': pin,
-    'entry.1065046570': address + ' | Product: ' + currentProduct.emoji + ' ' + currentProduct.name + ' | Total: Rs.' + total + ' | Payment: ' + payment + ' | OrderID: ' + orderId,
-    'entry.282610367':  String(qty)
-  };
-
-  Object.keys(fields).forEach(function(key){
-    var input = document.createElement('input');
-    input.type  = 'hidden';
-    input.name  = key;
-    input.value = fields[key];
-    hiddenForm.appendChild(input);
-  });
-
-  document.body.appendChild(hiddenForm);
-  hiddenForm.submit();
-
-  // Show success after short delay
-  setTimeout(function(){
-    showSuccess(orderId, name, phone, address, city, state, pin, payment, total);
-    // cleanup
-    document.body.removeChild(iframe);
-    document.body.removeChild(hiddenForm);
-  }, 1500);
+  fetch(SCRIPT_URL, {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({
+      orderId:  orderId,
+      product:  currentProduct.emoji + ' ' + currentProduct.name,
+      name:     name,
+      phone:    phone,
+      address:  address,
+      city:     city,
+      state:    state,
+      pin:      pin,
+      qty:      qty,
+      total:    '₹' + total,
+      payment:  payment
+    })
+  })
+  .then(function(){ showSuccess(orderId, name, phone, address, city, state, pin, payment, total); })
+  .catch(function(){ showSuccess(orderId, name, phone, address, city, state, pin, payment, total); });
 }
 
 function showSuccess(orderId, name, phone, address, city, state, pin, payment, total){
