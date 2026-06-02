@@ -5,12 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>BharatGrowTech – Best Budget Gadgets in India</title>
 <meta name="description" content="Buy top quality budget gadgets online in India. COD available. Fast delivery all over India."/>
-
-
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet"/>
 <style>
-/*<![CDATA[*/
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&amp;family=DM+Sans:wght@400;500&amp;display=swap');
-
 *{margin:0;padding:0;box-sizing:border-box;}
 :root{
   --primary:#0A0F1E;
@@ -22,12 +19,12 @@
   --green:#22c55e;
   --border:rgba(255,255,255,0.07);
 }
-body{background:var(--primary);color:var(--text);font-family:Arial,sans-serif;font-size:15px;}
-h1,h2,h3,.price{font-family:'Georgia',serif;}
+body{background:var(--primary);color:var(--text);font-family:'DM Sans',sans-serif;font-size:15px;}
+h1,h2,h3,.price{font-family:'Rajdhani',sans-serif;}
 a{text-decoration:none;}
 
 nav{background:#060B17;border-bottom:1px solid rgba(0,198,255,0.12);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;}
-.logo{font-family:'Georgia',serif;font-size:22px;font-weight:700;color:var(--accent);letter-spacing:1px;}
+.logo{font-family:'Rajdhani',sans-serif;font-size:22px;font-weight:700;color:var(--accent);letter-spacing:1px;}
 .logo span{color:var(--accent2);}
 .nav-links{display:flex;gap:20px;font-size:14px;}
 .nav-links a{color:var(--muted);transition:color .2s;}
@@ -57,7 +54,7 @@ nav{background:#060B17;border-bottom:1px solid rgba(0,198,255,0.12);padding:14px
 .price-old{font-size:12px;color:var(--muted);text-decoration:line-through;}
 .badge{background:rgba(255,107,53,0.12);color:var(--accent2);font-size:10px;padding:2px 7px;border-radius:4px;border:1px solid rgba(255,107,53,0.2);}
 .tag-new{display:inline-block;background:rgba(0,198,255,0.1);color:var(--accent);font-size:10px;padding:2px 7px;border-radius:4px;border:1px solid rgba(0,198,255,0.18);margin-bottom:6px;}
-.btn-buy{width:100%;background:var(--accent);color:#000;border:none;padding:10px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;font-family:Arial,sans-serif;transition:opacity .2s;}
+.btn-buy{width:100%;background:var(--accent);color:#000;border:none;padding:10px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;transition:opacity .2s;}
 .btn-buy:hover{opacity:0.88;}
 
 .modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:999;align-items:center;justify-content:center;padding:16px;}
@@ -67,12 +64,12 @@ nav{background:#060B17;border-bottom:1px solid rgba(0,198,255,0.12);padding:14px
 .modal-product{display:flex;align-items:center;gap:14px;margin-bottom:20px;padding-bottom:18px;border-bottom:1px solid var(--border);}
 .modal-emoji{font-size:36px;width:60px;height:60px;background:linear-gradient(135deg,#0a1628,#0d1f3c);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
 .modal-pname{font-size:15px;font-weight:500;margin-bottom:4px;}
-.modal-pprice{font-family:'Georgia',serif;font-size:20px;font-weight:700;color:var(--accent);}
+.modal-pprice{font-family:'Rajdhani',sans-serif;font-size:20px;font-weight:700;color:var(--accent);}
 .modal h2{font-size:18px;font-weight:600;margin-bottom:18px;}
 
 .form-group{margin-bottom:14px;}
 .form-label{font-size:12px;color:var(--muted);margin-bottom:6px;display:block;font-weight:500;letter-spacing:0.03em;}
-.form-input{width:100%;background:#060B17;border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:10px 14px;font-size:14px;color:var(--text);font-family:Arial,sans-serif;outline:none;transition:border-color .2s;}
+.form-input{width:100%;background:#060B17;border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:10px 14px;font-size:14px;color:var(--text);font-family:'DM Sans',sans-serif;outline:none;transition:border-color .2s;}
 .form-input:focus{border-color:rgba(0,198,255,0.45);}
 .form-input::placeholder{color:var(--muted);}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
@@ -82,8 +79,8 @@ nav{background:#060B17;border-bottom:1px solid rgba(0,198,255,0.12);padding:14px
 .qty-val{flex:1;text-align:center;font-size:15px;font-weight:500;color:var(--text);}
 .total-box{background:#060B17;border:1px solid rgba(0,198,255,0.15);border-radius:10px;padding:14px 16px;margin:18px 0;display:flex;justify-content:space-between;align-items:center;}
 .total-label{font-size:13px;color:var(--muted);}
-.total-amount{font-family:'Georgia',serif;font-size:22px;font-weight:700;color:var(--accent);}
-.btn-submit{width:100%;background:var(--green);color:#fff;border:none;padding:13px;border-radius:10px;font-size:15px;font-weight:600;cursor:pointer;font-family:Arial,sans-serif;transition:opacity .2s;}
+.total-amount{font-family:'Rajdhani',sans-serif;font-size:22px;font-weight:700;color:var(--accent);}
+.btn-submit{width:100%;background:var(--green);color:#fff;border:none;padding:13px;border-radius:10px;font-size:15px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;transition:opacity .2s;}
 .btn-submit:hover{opacity:0.88;}
 .btn-submit:disabled{opacity:0.6;cursor:not-allowed;}
 .cod-badge{display:flex;align-items:center;justify-content:center;gap:6px;margin-top:10px;font-size:12px;color:var(--muted);}
@@ -94,7 +91,7 @@ nav{background:#060B17;border-bottom:1px solid rgba(0,198,255,0.12);padding:14px
 .success-desc{font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;}
 .order-details{background:#060B17;border:1px solid var(--border);border-radius:10px;padding:14px 16px;text-align:left;font-size:13px;line-height:2;}
 .order-details span{color:var(--muted);}
-.btn-close-success{background:var(--accent);color:#000;border:none;padding:11px 28px;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;font-family:Arial,sans-serif;margin-top:18px;}
+.btn-close-success{background:var(--accent);color:#000;border:none;padding:11px 28px;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;margin-top:18px;}
 
 .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px;}
 .feature-card{background:var(--card-bg);border:1px solid var(--border);border-radius:12px;padding:18px;text-align:center;}
@@ -111,12 +108,11 @@ footer a{color:var(--accent);}
   .form-row{grid-template-columns:1fr;}
   .modal{padding:22px 16px;}
 }
-/*]]>*/
 </style>
 </head>
 <body>
 
-
+<!-- ✅ FIXED: Logo now shows BharatGrowTech correctly -->
 <nav>
   <div class="logo">BharatGrow<span>Tech</span></div>
   <div class="nav-links">
@@ -129,7 +125,7 @@ footer a{color:var(--accent);}
 
 <div class="hero">
   <div class="hero-tag">🇮🇳 ALL INDIA DELIVERY</div>
-  <h1>Best Budget <span>Gadgets</span><br/>Delivered to Your Door</h1>
+  <h1>Best Budget <span>Gadgets</span><br>Delivered to Your Door</h1>
   <p>Top-quality tech accessories at unbeatable prices. COD available. Fast shipping across India.</p>
   <div class="trust-bar">
     <div class="trust-item">🚚 Free Delivery</div>
@@ -255,15 +251,15 @@ footer a{color:var(--accent);}
     </div>
     <div class="feature-card">
       <div class="feature-icon">🔒</div>
-      <div class="feature-title">Safe &amp; Secure</div>
+      <div class="feature-title">Safe & Secure</div>
       <div class="feature-desc">Your details are always private and safe.</div>
     </div>
   </div>
 </div>
 
 <footer id="contact">
-  © 2024 BharatGrowTech &amp;nbsp;|&amp;nbsp; All India Delivery &amp;nbsp;|&amp;nbsp;
-  <a href="#">Privacy Policy</a> &amp;nbsp;|&amp;nbsp; Made with ❤️ in India
+  © 2024 BharatGrowTech &nbsp;|&nbsp; All India Delivery &nbsp;|&nbsp;
+  <a href="#">Privacy Policy</a> &nbsp;|&nbsp; Made with ❤️ in India
 </footer>
 
 <!-- ORDER MODAL -->
@@ -379,13 +375,13 @@ footer a{color:var(--accent);}
       </div>
 
       <button class="btn-submit" id="placeBtn" onclick="submitOrder()">✅ Place Order</button>
-      <div class="cod-badge">🔒 Secure Order &amp;nbsp;•&amp;nbsp; Free Delivery &amp;nbsp;•&amp;nbsp; Easy Returns</div>
+      <div class="cod-badge">🔒 Secure Order &nbsp;•&nbsp; Free Delivery &nbsp;•&nbsp; Easy Returns</div>
     </div>
 
     <div class="success-screen" id="successScreen">
       <div class="success-icon">🎉</div>
       <div class="success-title">Order Placed!</div>
-      <div class="success-desc">Thank you! Your order has been received.<br/>You will get a confirmation call within 24 hours.</div>
+      <div class="success-desc">Thank you! Your order has been received.<br>You will get a confirmation call within 24 hours.</div>
       <div class="order-details" id="orderSummary"></div>
       <button class="btn-close-success" onclick="closeModal()">Continue Shopping</button>
     </div>
@@ -394,7 +390,6 @@ footer a{color:var(--accent);}
 </div>
 
 <script>
-//<![CDATA[
 var currentProduct = {name:'',emoji:'',price:0};
 var qty = 1;
 
@@ -470,27 +465,21 @@ function submitOrder(){
   btn.disabled = true;
   btn.textContent = '⏳ Placing Order...';
 
-  
-  
-  var FORMSPREE_ID = 'YOUR_FORMSPREE_ID';
+  // ── GOOGLE FORMS INTEGRATION ──
+  var FORM_ID = '1FAIpQLScyHujFWHOOPREn_2hK0ZKOT_b0iFEuHQF2hth_eKhzIDkxJw';
+  var formData = new FormData();
+  formData.append('entry.2005620554', name);
+  formData.append('entry.1166974658', phone);
+  formData.append('entry.1930531284', state);
+  formData.append('entry.1965978034', city);
+  formData.append('entry.1820389809', pin);
+  formData.append('entry.1065046570', address + ' | Product: ' + currentProduct.emoji + ' ' + currentProduct.name + ' | Total: ₹' + total + ' | Payment: ' + payment + ' | OrderID: ' + orderId);
+  formData.append('entry.282610367', qty);
 
-  fetch('https://formspree.io/f/' + FORMSPREE_ID, {
+  fetch('https://docs.google.com/forms/d/e/' + FORM_ID + '/formResponse', {
     method: 'POST',
-    headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
-    body: JSON.stringify({
-      _subject:  '🛒 New Order ' + orderId + ' - BharatGrowTech',
-      order_id:  orderId,
-      product:   currentProduct.emoji + ' ' + currentProduct.name,
-      quantity:  qty,
-      total:     '₹' + total,
-      payment:   payment,
-      name:      name,
-      mobile:    phone,
-      address:   address,
-      city:      city,
-      state:     state,
-      pincode:   pin
-    })
+    mode: 'no-cors',
+    body: formData
   })
   .then(function(){ showSuccess(orderId, name, phone, address, city, state, pin, payment, total); })
   .catch(function(){ showSuccess(orderId, name, phone, address, city, state, pin, payment, total); });
@@ -500,16 +489,15 @@ function showSuccess(orderId, name, phone, address, city, state, pin, payment, t
   document.getElementById('orderForm').style.display = 'none';
   document.getElementById('successScreen').style.display = 'block';
   document.getElementById('orderSummary').innerHTML =
-    '<span>Order ID</span> &amp;nbsp; ' + orderId + '<br/>' +
-    '<span>Product</span> &amp;nbsp; ' + currentProduct.emoji + ' ' + currentProduct.name + '<br/>' +
-    '<span>Quantity</span> &amp;nbsp; ' + qty + '<br/>' +
-    '<span>Total</span> &amp;nbsp; ₹' + total + '<br/>' +
-    '<span>Payment</span> &amp;nbsp; ' + payment + '<br/>' +
-    '<span>Name</span> &amp;nbsp; ' + name + '<br/>' +
-    '<span>Mobile</span> &amp;nbsp; ' + phone + '<br/>' +
-    '<span>Address</span> &amp;nbsp; ' + address + ', ' + city + ', ' + state + ' - ' + pin;
+    '<span>Order ID</span> &nbsp; ' + orderId + '<br>' +
+    '<span>Product</span> &nbsp; ' + currentProduct.emoji + ' ' + currentProduct.name + '<br>' +
+    '<span>Quantity</span> &nbsp; ' + qty + '<br>' +
+    '<span>Total</span> &nbsp; ₹' + total + '<br>' +
+    '<span>Payment</span> &nbsp; ' + payment + '<br>' +
+    '<span>Name</span> &nbsp; ' + name + '<br>' +
+    '<span>Mobile</span> &nbsp; ' + phone + '<br>' +
+    '<span>Address</span> &nbsp; ' + address + ', ' + city + ', ' + state + ' - ' + pin;
 }
-//]]>
 </script>
 </body>
 </html>
