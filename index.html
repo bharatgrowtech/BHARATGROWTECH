@@ -84,7 +84,6 @@ nav {
 .qty-btn { background: none; border: none; font-size: 1.3rem; padding: 0.2rem 1rem; color: var(--accent-gold); cursor: pointer; }
 .total-area { background: var(--bg-elevated); border-radius: 1rem; padding: 0.8rem 1rem; display: flex; justify-content: space-between; margin: 1rem 0; }
 .btn-submit { width: 100%; background: var(--accent-gold); border: none; padding: 0.9rem; border-radius: 3rem; font-weight: 800; color: #0b0f1c; font-size: 1rem; cursor: pointer; font-family: 'Inter', sans-serif; }
-/* FIX 3: WhatsApp footer link style */
 footer { text-align: center; padding: 2rem; border-top: 1px solid var(--border-dim); color: var(--text-muted); font-size: 0.75rem; line-height: 2; }
 footer a { color: #25d366; text-decoration: none; font-weight: 600; }
 footer a:hover { text-decoration: underline; }
@@ -158,7 +157,6 @@ footer a:hover { text-decoration: underline; }
   </div>
 </div>
 
-<!-- FIX 3: Footer with Patna location + WhatsApp link (replace number below) -->
 <footer id="contact">
   <i class="fas fa-store"></i> BharatGrowTech — India's most loved store<br>
   📍 Patna, Bihar &nbsp;|&nbsp;
@@ -178,7 +176,8 @@ footer a:hover { text-decoration: underline; }
 </div>
 
 <script>
-const PRODUCTS = [
+const PRODUCTS = [ 
+  { id:16, name:"Artificial Plants", category:"Home Decor", desc:"Beautiful mini artificial plants in 8+ vibrant colors. Only 6 inches tall — perfect for office desk, window sill, or coffee table. No sunlight. No watering. No mess. Just pure aesthetic.", price:499, oldPrice:999, mainImg:"https://images.meesho.com/images/products/746229226/ctkso_512.avif?width=512", gallery:["https://images.meesho.com/images/products/746229226/ctkso_512.avif?width=512","https://images.meesho.com/images/products/746229226/g5e4z_512.avif?width=512","https://images.meesho.com/images/products/746229226/4menu_512.avif?width=512"] },
   { id:1, name:"Premium Cotton Bedsheet", category:"Home", desc:"King size, 800 TC, breathable cotton", price:899, oldPrice:2299, mainImg:"https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=400&h=300&fit=crop", gallery:["https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=400&h=300&fit=crop","https://images.unsplash.com/photo-1612320643017-0b13d03e3f7b?w=400&h=300&fit=crop","https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?w=400&h=300&fit=crop"] },
   { id:2, name:"Stainless Steel Tiffin", category:"Kitchen", desc:"3-layer, leak-proof, insulated lunchbox", price:449, oldPrice:1099, mainImg:"https://images.unsplash.com/photo-1585679099828-356b0d1e38e8?w=400&h=300&fit=crop", gallery:["https://images.unsplash.com/photo-1585679099828-356b0d1e38e8?w=400&h=300&fit=crop","https://images.unsplash.com/photo-1590794056226-79ef3a8147e1?w=400&h=300&fit=crop","https://images.unsplash.com/photo-1603190287605-e6c32fa0dccb?w=400&h=300&fit=crop"] },
   { id:3, name:"Eco Yoga Mat", category:"Fitness", desc:"10mm non-slip, TPE material, carry bag", price:599, oldPrice:1499, mainImg:"https://images.unsplash.com/photo-1592432678016-e910b452f9a2?w=400&h=300&fit=crop", gallery:["https://images.unsplash.com/photo-1592432678016-e910b452f9a2?w=400&h=300&fit=crop","https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?w=400&h=300&fit=crop","https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&h=300&fit=crop"] },
@@ -193,10 +192,9 @@ const PRODUCTS = [
   { id:12, name:"LED Desk Lamp", category:"Electronics", desc:"Touch dimmer, USB port, eye-care", price:649, oldPrice:1599, mainImg:"https://images.unsplash.com/photo-1571716575239-2dcde4e804e2?w=400&h=300&fit=crop", gallery:["https://images.unsplash.com/photo-1571716575239-2dcde4e804e2?w=400&h=300&fit=crop","https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=400&h=300&fit=crop","https://images.unsplash.com/photo-1534073828943-f801091bb18c?w=400&h=300&fit=crop"] },
   { id:13, name:"Women's Ethnic Jhumka", category:"Jewelry", desc:"Lightweight, antique gold finish", price:299, oldPrice:799, mainImg:"https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=400&h=300&fit=crop", gallery:["https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=400&h=300&fit=crop","https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=400&h=300&fit=crop","https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=400&h=300&fit=crop"] },
   { id:14, name:"Stainless Water Bottle", category:"Lifestyle", desc:"750ml, vacuum insulated, leak-proof", price:399, oldPrice:999, mainImg:"https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=400&h=300&fit=crop", gallery:["https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=400&h=300&fit=crop","https://images.unsplash.com/photo-1523362628745-0c100150b504?w=400&h=300&fit=crop","https://images.unsplash.com/photo-1612459284970-e8f027596582?w=400&h=300&fit=crop"] },
-  { id:15, name:"Decorative Wall Clock", category:"Home Decor", desc:"12 inch, silent sweep, wooden finish", price:899, oldPrice:1899, mainImg:"https://images.unsplash.com/photo-1563861826100-9cb868fdbe1c?w=400&h=300&fit=crop", gallery:["https://images.unsplash.com/photo-1563861826100-9cb868fdbe1c?w=400&h=300&fit=crop","https://images.unsplash.com/photo-1507643179773-40e6f9ef0632?w=400&h=300&fit=crop","https://images.unsplash.com/photo-1526374965326-5b5c1c8e07d8?w=400&h=300&fit=crop"] }
+  { id:15, name:"Decorative Wall Clock", category:"Home Decor", desc:"12 inch, silent sweep, wooden finish", price:899, oldPrice:1899, mainImg:"https://images.unsplash.com/photo-1563861826100-9cb868fdbe1c?w=400&h=300&fit=crop", gallery:["https://images.unsplash.com/photo-1563861826100-9cb868fdbe1c?w=400&h=300&fit=crop","https://images.unsplash.com/photo-1507643179773-40e6f9ef0632?w=400&h=300&fit=crop","https://images.unsplash.com/photo-1526374965326-5b5c1c8e07d8?w=400&h=300&fit=crop"] },
 ];
 
-// FIX 1: All Indian states list
 const ALL_STATES = [
   "Andhra Pradesh","Arunachal Pradesh","Assam","Bihar","Chhattisgarh",
   "Delhi","Goa","Gujarat","Haryana","Himachal Pradesh","Jharkhand",
