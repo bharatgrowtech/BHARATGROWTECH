@@ -1,508 +1,385 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>BharatGrowTech – Best Budget Gadgets in India</title>
-<meta name="description" content="Buy top quality budget gadgets online in India. COD available. Fast delivery all over India."/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>BharatGrowTech – Quality Products Online | India's Mega Store</title>
+<meta name="description" content="Shop premium quality products across India. Free delivery, easy returns, secure checkout. Best online store for home, kitchen, electronics & lifestyle.">
+<meta name="theme-color" content="#1a1f2e">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}
-:root{
-  --primary:#0A0F1E;
-  --accent:#00C6FF;
-  --accent2:#FF6B35;
-  --card-bg:#0D1520;
-  --text:#F0F4FF;
-  --muted:#8B9CB0;
-  --green:#22c55e;
-  --border:rgba(255,255,255,0.07);
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-primary: #0b0f1c; --bg-card: #131a2c; --bg-elevated: #19213a;
+  --accent-gold: #e6b17e; --accent-gold-light: #f3d2a3; --accent-slate: #8b9bb4;
+  --text-white: #f8fafc; --text-muted: #a0aec0;
+  --border-dim: rgba(230, 177, 126, 0.2);
+  --shadow-xl: 0 20px 35px -10px rgba(0, 0, 0, 0.5);
+  --radius-2xl: 28px; --radius-xl: 18px;
 }
-body{background:var(--primary);color:var(--text);font-family:'DM Sans',sans-serif;font-size:15px;}
-h1,h2,h3,.price{font-family:'Rajdhani',sans-serif;}
-a{text-decoration:none;}
-
-nav{background:#060B17;border-bottom:1px solid rgba(0,198,255,0.12);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;}
-.logo{font-family:'Rajdhani',sans-serif;font-size:22px;font-weight:700;color:var(--accent);letter-spacing:1px;}
-.logo span{color:var(--accent2);}
-.nav-links{display:flex;gap:20px;font-size:14px;}
-.nav-links a{color:var(--muted);transition:color .2s;}
-.nav-links a:hover{color:var(--accent);}
-
-.hero{padding:56px 24px 44px;text-align:center;background:radial-gradient(ellipse at 50% 0%,rgba(0,198,255,0.07) 0%,transparent 65%);}
-.hero-tag{display:inline-block;background:rgba(0,198,255,0.08);color:var(--accent);border:1px solid rgba(0,198,255,0.2);padding:5px 14px;border-radius:20px;font-size:12px;letter-spacing:1px;margin-bottom:16px;}
-.hero h1{font-size:40px;font-weight:700;line-height:1.15;margin-bottom:12px;}
-.hero h1 span{color:var(--accent);}
-.hero p{color:var(--muted);font-size:15px;max-width:460px;margin:0 auto 20px;line-height:1.7;}
-.trust-bar{display:flex;gap:20px;justify-content:center;margin-top:28px;flex-wrap:wrap;}
-.trust-item{font-size:13px;color:var(--muted);}
-
-.section{padding:44px 24px;}
-.section-title{font-size:26px;font-weight:700;margin-bottom:6px;}
-.accent-line{width:36px;height:3px;background:var(--accent);border-radius:2px;margin:8px 0 24px;}
-
-.products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;}
-.product-card{background:var(--card-bg);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:transform .2s,border-color .2s;cursor:pointer;}
-.product-card:hover{transform:translateY(-4px);border-color:rgba(0,198,255,0.3);}
-.product-img{width:100%;height:155px;display:flex;align-items:center;justify-content:center;font-size:52px;background:linear-gradient(135deg,#0a1628,#0d1f3c);}
-.product-info{padding:14px;}
-.product-name{font-size:14px;font-weight:500;margin-bottom:4px;line-height:1.4;}
-.product-desc{font-size:12px;color:var(--muted);margin-bottom:10px;line-height:1.5;}
-.product-price{display:flex;align-items:center;gap:8px;margin-bottom:12px;}
-.price{font-size:20px;font-weight:700;color:var(--accent);}
-.price-old{font-size:12px;color:var(--muted);text-decoration:line-through;}
-.badge{background:rgba(255,107,53,0.12);color:var(--accent2);font-size:10px;padding:2px 7px;border-radius:4px;border:1px solid rgba(255,107,53,0.2);}
-.tag-new{display:inline-block;background:rgba(0,198,255,0.1);color:var(--accent);font-size:10px;padding:2px 7px;border-radius:4px;border:1px solid rgba(0,198,255,0.18);margin-bottom:6px;}
-.btn-buy{width:100%;background:var(--accent);color:#000;border:none;padding:10px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;transition:opacity .2s;}
-.btn-buy:hover{opacity:0.88;}
-
-.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:999;align-items:center;justify-content:center;padding:16px;}
-.modal-overlay.active{display:flex;}
-.modal{background:#0D1520;border:1px solid rgba(0,198,255,0.18);border-radius:16px;width:100%;max-width:480px;max-height:90vh;overflow-y:auto;padding:28px 24px;position:relative;}
-.modal-close{position:absolute;top:16px;right:16px;background:rgba(255,255,255,0.07);border:none;color:var(--text);width:30px;height:30px;border-radius:50%;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;}
-.modal-product{display:flex;align-items:center;gap:14px;margin-bottom:20px;padding-bottom:18px;border-bottom:1px solid var(--border);}
-.modal-emoji{font-size:36px;width:60px;height:60px;background:linear-gradient(135deg,#0a1628,#0d1f3c);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-.modal-pname{font-size:15px;font-weight:500;margin-bottom:4px;}
-.modal-pprice{font-family:'Rajdhani',sans-serif;font-size:20px;font-weight:700;color:var(--accent);}
-.modal h2{font-size:18px;font-weight:600;margin-bottom:18px;}
-
-.form-group{margin-bottom:14px;}
-.form-label{font-size:12px;color:var(--muted);margin-bottom:6px;display:block;font-weight:500;letter-spacing:0.03em;}
-.form-input{width:100%;background:#060B17;border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:10px 14px;font-size:14px;color:var(--text);font-family:'DM Sans',sans-serif;outline:none;transition:border-color .2s;}
-.form-input:focus{border-color:rgba(0,198,255,0.45);}
-.form-input::placeholder{color:var(--muted);}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
-.qty-control{display:flex;align-items:center;border:1px solid rgba(255,255,255,0.1);border-radius:8px;overflow:hidden;background:#060B17;}
-.qty-btn{background:rgba(0,198,255,0.08);border:none;color:var(--accent);width:38px;height:40px;font-size:18px;cursor:pointer;font-weight:600;transition:background .2s;}
-.qty-btn:hover{background:rgba(0,198,255,0.18);}
-.qty-val{flex:1;text-align:center;font-size:15px;font-weight:500;color:var(--text);}
-.total-box{background:#060B17;border:1px solid rgba(0,198,255,0.15);border-radius:10px;padding:14px 16px;margin:18px 0;display:flex;justify-content:space-between;align-items:center;}
-.total-label{font-size:13px;color:var(--muted);}
-.total-amount{font-family:'Rajdhani',sans-serif;font-size:22px;font-weight:700;color:var(--accent);}
-.btn-submit{width:100%;background:var(--green);color:#fff;border:none;padding:13px;border-radius:10px;font-size:15px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;transition:opacity .2s;}
-.btn-submit:hover{opacity:0.88;}
-.btn-submit:disabled{opacity:0.6;cursor:not-allowed;}
-.cod-badge{display:flex;align-items:center;justify-content:center;gap:6px;margin-top:10px;font-size:12px;color:var(--muted);}
-
-.success-screen{display:none;text-align:center;padding:20px 0;}
-.success-icon{font-size:56px;margin-bottom:14px;}
-.success-title{font-size:22px;font-weight:700;color:var(--green);margin-bottom:8px;}
-.success-desc{font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;}
-.order-details{background:#060B17;border:1px solid var(--border);border-radius:10px;padding:14px 16px;text-align:left;font-size:13px;line-height:2;}
-.order-details span{color:var(--muted);}
-.btn-close-success{background:var(--accent);color:#000;border:none;padding:11px 28px;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;margin-top:18px;}
-
-.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px;}
-.feature-card{background:var(--card-bg);border:1px solid var(--border);border-radius:12px;padding:18px;text-align:center;}
-.feature-icon{font-size:26px;margin-bottom:10px;}
-.feature-title{font-size:14px;font-weight:500;margin-bottom:5px;}
-.feature-desc{font-size:12px;color:var(--muted);line-height:1.6;}
-
-footer{background:#060B17;padding:22px;text-align:center;font-size:13px;color:var(--muted);border-top:1px solid var(--border);}
-footer a{color:var(--accent);}
-
-@media(max-width:520px){
-  .hero h1{font-size:28px;}
-  .nav-links{display:none;}
-  .form-row{grid-template-columns:1fr;}
-  .modal{padding:22px 16px;}
+body { background: var(--bg-primary); color: var(--text-white); font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+nav {
+  background: linear-gradient(135deg, #0f1629 0%, #0a0e1a 100%);
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid var(--accent-gold);
+  position: sticky; top: 0; z-index: 100;
+  padding: 0.9rem 2.5rem;
+  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+.logo { font-size: 1.9rem; font-weight: 800; letter-spacing: -0.02em; background: linear-gradient(135deg, #ffffff, var(--accent-gold)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.logo span { background: linear-gradient(135deg, var(--accent-gold), #ffcd94); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.nav-links { display: flex; gap: 2rem; }
+.nav-links a { color: var(--text-muted); text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: 0.2s; display: flex; align-items: center; gap: 6px; }
+.nav-links a:hover { color: var(--accent-gold); }
+.hero { padding: 5rem 2rem 4rem; text-align: center; background: radial-gradient(ellipse 80% 50% at 50% 20%, rgba(230,177,126,0.12), transparent 70%); }
+.hero-badge { display: inline-flex; background: rgba(230,177,126,0.12); border: 1px solid var(--border-dim); padding: 0.3rem 1.2rem; border-radius: 60px; font-size: 0.75rem; color: var(--accent-gold); margin-bottom: 1.5rem; }
+.hero h1 { font-size: 3rem; font-weight: 800; line-height: 1.2; background: linear-gradient(145deg, #fff, #e6cca3); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.stats { display: flex; justify-content: center; gap: 2rem; margin-top: 2rem; flex-wrap: wrap; }
+.stat-item { background: rgba(19,26,44,0.7); backdrop-filter: blur(5px); padding: 0.5rem 1.3rem; border-radius: 50px; font-size: 0.8rem; font-weight: 500; border: 0.5px solid var(--border-dim); }
+.filter-bar { background: var(--bg-card); border-radius: 60px; padding: 0.6rem 1.2rem; margin-bottom: 2rem; display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; justify-content: space-between; border: 1px solid var(--border-dim); }
+.search-box { display: flex; align-items: center; background: var(--bg-primary); border-radius: 40px; padding: 0.3rem 1rem; border: 1px solid var(--border-dim); flex: 2; min-width: 180px; }
+.search-box i { color: var(--accent-gold); margin-right: 8px; }
+.search-box input { background: transparent; border: none; color: white; padding: 0.5rem 0; width: 100%; outline: none; }
+.category-filter { display: flex; gap: 8px; flex-wrap: wrap; }
+.cat-btn { background: transparent; border: 1px solid var(--border-dim); padding: 0.4rem 1rem; border-radius: 40px; font-size: 0.75rem; cursor: pointer; color: var(--text-muted); transition: 0.2s; font-family: 'Inter', sans-serif; }
+.cat-btn.active, .cat-btn:hover { background: var(--accent-gold); color: #0b0f1c; border-color: var(--accent-gold); font-weight: 600; }
+.section { padding: 2rem 2rem 4rem; }
+.container { max-width: 1300px; margin: 0 auto; }
+.section-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2rem; border-left: 4px solid var(--accent-gold); padding-left: 1rem; }
+.section-title { font-size: 1.8rem; font-weight: 700; }
+.section-sub { color: var(--accent-gold); font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; }
+.products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 1.8rem; }
+.product-card { background: var(--bg-card); border-radius: var(--radius-xl); border: 1px solid var(--border-dim); overflow: hidden; transition: all 0.25s ease; cursor: pointer; position: relative; }
+.product-card:hover { transform: translateY(-6px); border-color: var(--accent-gold); box-shadow: var(--shadow-xl); }
+.product-img { width: 100%; height: 210px; object-fit: cover; display: block; background: #1e2a3a; }
+.product-info { padding: 1rem 1rem 1.2rem; }
+.category-badge { font-size: 0.6rem; font-weight: 600; color: var(--accent-gold); text-transform: uppercase; letter-spacing: 1px; }
+.product-name { font-weight: 700; font-size: 1rem; margin: 0.4rem 0 0.2rem; }
+.product-desc { font-size: 0.7rem; color: var(--text-muted); margin: 0.3rem 0 0.5rem; }
+.price-row { display: flex; align-items: baseline; gap: 8px; margin: 0.6rem 0; }
+.current-price { font-size: 1.4rem; font-weight: 800; color: var(--accent-gold); }
+.old-price { font-size: 0.75rem; text-decoration: line-through; color: var(--text-muted); }
+.btn-order { width: 100%; background: transparent; border: 1px solid var(--accent-gold); padding: 0.7rem; border-radius: 3rem; font-weight: 600; font-size: 0.85rem; cursor: pointer; transition: 0.2s; color: white; display: flex; align-items: center; justify-content: center; gap: 8px; font-family: 'Inter', sans-serif; }
+.btn-order:hover { background: var(--accent-gold); color: #0b0f1c; }
+.share-btn { position: absolute; top: 12px; right: 12px; background: rgba(0,0,0,0.6); backdrop-filter: blur(4px); border-radius: 40px; padding: 6px 10px; font-size: 0.7rem; cursor: pointer; z-index: 2; display: flex; align-items: center; gap: 5px; color: var(--accent-gold); border: none; font-family: 'Inter', sans-serif; }
+.share-btn:hover { background: var(--accent-gold); color: #0b0f1c; }
+.modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.9); backdrop-filter: blur(12px); z-index: 1000; align-items: center; justify-content: center; padding: 1rem; }
+.modal-overlay.active { display: flex; }
+.modal { background: var(--bg-card); max-width: 750px; width: 100%; max-height: 90vh; border-radius: var(--radius-2xl); border: 1px solid var(--border-dim); overflow-y: auto; position: relative; }
+.modal-header { padding: 1rem 1.5rem; display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-dim); }
+.modal-close { background: rgba(255,255,255,0.05); border: none; width: 34px; height: 34px; border-radius: 50%; color: white; cursor: pointer; }
+.modal-body { padding: 1.5rem; }
+.gallery-section { margin-bottom: 1.5rem; }
+.main-gallery-img { width: 100%; height: 280px; object-fit: cover; border-radius: 1rem; background: #1a2335; }
+.thumbnails { display: flex; gap: 12px; margin-top: 12px; flex-wrap: wrap; }
+.thumb { width: 70px; height: 70px; object-fit: cover; border-radius: 12px; cursor: pointer; border: 2px solid transparent; transition: 0.1s; }
+.thumb.active { border-color: var(--accent-gold); }
+.form-group { margin-bottom: 1rem; }
+.form-label { font-size: 0.7rem; font-weight: 600; text-transform: uppercase; color: var(--text-muted); display: block; margin-bottom: 0.2rem; }
+.form-input, textarea, select { width: 100%; background: #0b1120; border: 1px solid #2a3448; border-radius: 1rem; padding: 0.7rem 1rem; color: white; font-size: 0.85rem; font-family: 'Inter', sans-serif; }
+.qty-selector { display: flex; align-items: center; gap: 12px; background: #0b1120; width: fit-content; border-radius: 2rem; padding: 0.1rem 0.2rem; border: 1px solid #2a3448; }
+.qty-btn { background: none; border: none; font-size: 1.3rem; padding: 0.2rem 1rem; color: var(--accent-gold); cursor: pointer; }
+.total-area { background: var(--bg-elevated); border-radius: 1rem; padding: 0.8rem 1rem; display: flex; justify-content: space-between; margin: 1rem 0; }
+.btn-submit { width: 100%; background: var(--accent-gold); border: none; padding: 0.9rem; border-radius: 3rem; font-weight: 800; color: #0b0f1c; font-size: 1rem; cursor: pointer; font-family: 'Inter', sans-serif; }
+/* FIX 3: WhatsApp footer link style */
+footer { text-align: center; padding: 2rem; border-top: 1px solid var(--border-dim); color: var(--text-muted); font-size: 0.75rem; line-height: 2; }
+footer a { color: #25d366; text-decoration: none; font-weight: 600; }
+footer a:hover { text-decoration: underline; }
+@media (max-width: 680px) {
+  nav { padding: 0.8rem 1rem; }
+  .nav-links { gap: 1rem; }
+  .hero h1 { font-size: 1.8rem; }
+  .section { padding: 2rem 1rem; }
+  .filter-bar { flex-direction: column; align-items: stretch; border-radius: 1rem; }
 }
 </style>
 </head>
 <body>
 
-<!-- ✅ FIXED: Logo now shows BharatGrowTech correctly -->
 <nav>
   <div class="logo">BharatGrow<span>Tech</span></div>
   <div class="nav-links">
-    <a href="#">Home</a>
-    <a href="#products">Products</a>
-    <a href="#why-us">Why Us</a>
-    <a href="#contact">Contact</a>
+    <a href="#home"><i class="fas fa-home"></i> Home</a>
+    <a href="#products"><i class="fas fa-store"></i> Shop</a>
+    <a href="#why-us"><i class="fas fa-medal"></i> Why Us</a>
+    <a href="#contact"><i class="fas fa-headset"></i> Support</a>
   </div>
 </nav>
 
-<div class="hero">
-  <div class="hero-tag">🇮🇳 ALL INDIA DELIVERY</div>
-  <h1>Best Budget <span>Gadgets</span><br>Delivered to Your Door</h1>
-  <p>Top-quality tech accessories at unbeatable prices. COD available. Fast shipping across India.</p>
-  <div class="trust-bar">
-    <div class="trust-item">🚚 Free Delivery</div>
-    <div class="trust-item">💵 COD Available</div>
-    <div class="trust-item">🛡️ Easy Returns</div>
-    <div class="trust-item">⭐ 4.8★ Rated</div>
+<section id="home" class="hero">
+  <div class="hero-badge"><i class="fas fa-indian-rupee-sign"></i> Trusted by 50,000+ customers</div>
+  <h1>Quality products,<br>Delivered to your doorstep</h1>
+  <div class="stats">
+    <div class="stat-item"><i class="fas fa-truck-fast"></i> Free Shipping</div>
+    <div class="stat-item"><i class="fas fa-credit-card"></i> Pay on Delivery</div>
+    <div class="stat-item"><i class="fas fa-rotate-left"></i> 7 Days Returns</div>
+    <div class="stat-item"><i class="fas fa-clock"></i> Express Delivery</div>
+  </div>
+</section>
+
+<div class="container" id="products">
+  <div class="section">
+    <div class="section-header">
+      <div><div class="section-sub">🔥 premium collection</div><div class="section-title">Shop bestsellers</div></div>
+    </div>
+    <div class="filter-bar">
+      <div class="search-box">
+        <i class="fas fa-search"></i>
+        <input type="text" id="searchInput" placeholder="Search products...">
+      </div>
+      <div class="category-filter" id="categoryFilter">
+        <button class="cat-btn active" data-cat="all">All</button>
+        <button class="cat-btn" data-cat="Home">Home</button>
+        <button class="cat-btn" data-cat="Kitchen">Kitchen</button>
+        <button class="cat-btn" data-cat="Electronics">Electronics</button>
+        <button class="cat-btn" data-cat="Fitness">Fitness</button>
+        <button class="cat-btn" data-cat="Accessories">Accessories</button>
+        <button class="cat-btn" data-cat="Fashion">Fashion</button>
+        <button class="cat-btn" data-cat="Jewelry">Jewelry</button>
+        <button class="cat-btn" data-cat="Lifestyle">Lifestyle</button>
+        <button class="cat-btn" data-cat="Home Decor">Home Decor</button>
+      </div>
+    </div>
+    <div class="products-grid" id="productGrid"></div>
   </div>
 </div>
 
-<div class="section" id="products">
-  <div class="section-title">Hot Products 🔥</div>
-  <div class="accent-line"></div>
-  <div class="products-grid">
-
-    <div class="product-card" onclick="openOrder('Wireless Bluetooth Earbuds','🎧',499)">
-      <div class="product-img">🎧</div>
-      <div class="product-info">
-        <span class="tag-new">NEW</span>
-        <div class="product-name">Wireless Bluetooth Earbuds</div>
-        <div class="product-desc">40hr battery • Noise cancel • Deep bass</div>
-        <div class="product-price">
-          <span class="price">₹499</span>
-          <span class="price-old">₹999</span>
-          <span class="badge">50% OFF</span>
-        </div>
-        <button class="btn-buy" onclick="event.stopPropagation();openOrder('Wireless Bluetooth Earbuds','🎧',499)">🛒 Buy Now</button>
-      </div>
-    </div>
-
-    <div class="product-card" onclick="openOrder('Smart Fitness Band','⌚',699)">
-      <div class="product-img">⌚</div>
-      <div class="product-info">
-        <span class="tag-new">POPULAR</span>
-        <div class="product-name">Smart Fitness Band</div>
-        <div class="product-desc">HR monitor • Steps • Sleep tracker</div>
-        <div class="product-price">
-          <span class="price">₹699</span>
-          <span class="price-old">₹1,499</span>
-          <span class="badge">53% OFF</span>
-        </div>
-        <button class="btn-buy" onclick="event.stopPropagation();openOrder('Smart Fitness Band','⌚',699)">🛒 Buy Now</button>
-      </div>
-    </div>
-
-    <div class="product-card" onclick="openOrder('Magnetic Charging Cable','🔌',249)">
-      <div class="product-img">🔌</div>
-      <div class="product-info">
-        <div class="product-name">Magnetic Charging Cable</div>
-        <div class="product-desc">3-in-1 • Fast charge • Tangle-free</div>
-        <div class="product-price">
-          <span class="price">₹249</span>
-          <span class="price-old">₹599</span>
-          <span class="badge">58% OFF</span>
-        </div>
-        <button class="btn-buy" onclick="event.stopPropagation();openOrder('Magnetic Charging Cable','🔌',249)">🛒 Buy Now</button>
-      </div>
-    </div>
-
-    <div class="product-card" onclick="openOrder('Car Phone Mount','📱',199)">
-      <div class="product-img">📱</div>
-      <div class="product-info">
-        <div class="product-name">Car Phone Mount</div>
-        <div class="product-desc">360° rotate • Universal fit • Magnetic</div>
-        <div class="product-price">
-          <span class="price">₹199</span>
-          <span class="price-old">₹449</span>
-          <span class="badge">55% OFF</span>
-        </div>
-        <button class="btn-buy" onclick="event.stopPropagation();openOrder('Car Phone Mount','📱',199)">🛒 Buy Now</button>
-      </div>
-    </div>
-
-    <div class="product-card" onclick="openOrder('LED Desk Lamp','💡',599)">
-      <div class="product-img">💡</div>
-      <div class="product-info">
-        <div class="product-name">LED Desk Lamp</div>
-        <div class="product-desc">Touch dimmer • USB charge port • Eye care</div>
-        <div class="product-price">
-          <span class="price">₹599</span>
-          <span class="price-old">₹1,199</span>
-          <span class="badge">50% OFF</span>
-        </div>
-        <button class="btn-buy" onclick="event.stopPropagation();openOrder('LED Desk Lamp','💡',599)">🛒 Buy Now</button>
-      </div>
-    </div>
-
-    <div class="product-card" onclick="openOrder('10000mAh Power Bank','🔋',799)">
-      <div class="product-img">🔋</div>
-      <div class="product-info">
-        <span class="tag-new">HOT</span>
-        <div class="product-name">10000mAh Power Bank</div>
-        <div class="product-desc">Slim design • 2 USB ports • LED indicator</div>
-        <div class="product-price">
-          <span class="price">₹799</span>
-          <span class="price-old">₹1,599</span>
-          <span class="badge">50% OFF</span>
-        </div>
-        <button class="btn-buy" onclick="event.stopPropagation();openOrder('10000mAh Power Bank','🔋',799)">🛒 Buy Now</button>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-<div class="section" id="why-us" style="padding-top:0;">
-  <div class="section-title">Why Shop With Us?</div>
-  <div class="accent-line"></div>
-  <div class="features">
-    <div class="feature-card">
-      <div class="feature-icon">🚚</div>
-      <div class="feature-title">Fast Delivery</div>
-      <div class="feature-desc">3–7 days delivery across all India.</div>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">💵</div>
-      <div class="feature-title">COD Available</div>
-      <div class="feature-desc">Pay when your order arrives at your door.</div>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">🔄</div>
-      <div class="feature-title">Easy Returns</div>
-      <div class="feature-desc">7-day return policy. No questions asked.</div>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">🔒</div>
-      <div class="feature-title">Safe & Secure</div>
-      <div class="feature-desc">Your details are always private and safe.</div>
+<div id="why-us" class="container">
+  <div class="section">
+    <div class="section-header"><div><div class="section-sub">why bharatgrowtech</div><div class="section-title">Customer first, always</div></div></div>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:1.2rem;">
+      <div class="stat-item" style="background:#131a2c; text-align:center; padding:1rem;"><i class="fas fa-rupee-sign" style="color:var(--accent-gold); font-size:1.8rem;"></i><h4>COD Only</h4><small>Pay when you receive</small></div>
+      <div class="stat-item" style="background:#131a2c; text-align:center; padding:1rem;"><i class="fas fa-box" style="color:var(--accent-gold); font-size:1.8rem;"></i><h4>Secure Packaging</h4><small>Tamper-proof</small></div>
+      <div class="stat-item" style="background:#131a2c; text-align:center; padding:1rem;"><i class="fas fa-tag" style="color:var(--accent-gold); font-size:1.8rem;"></i><h4>Best Prices</h4><small>Direct sourcing</small></div>
     </div>
   </div>
 </div>
 
+<!-- FIX 3: Footer with Patna location + WhatsApp link (replace number below) -->
 <footer id="contact">
-  © 2024 BharatGrowTech &nbsp;|&nbsp; All India Delivery &nbsp;|&nbsp;
-  <a href="#">Privacy Policy</a> &nbsp;|&nbsp; Made with ❤️ in India
+  <i class="fas fa-store"></i> BharatGrowTech — India's most loved store<br>
+  📍 Patna, Bihar &nbsp;|&nbsp;
+  <a href="https://wa.me/91XXXXXXXXXX" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
+  &nbsp;|&nbsp; ✉️ hello@bharatgrowtech.in<br>
+  © 2025 | All India Delivery | Cash on Delivery only
 </footer>
 
-<!-- ORDER MODAL -->
-<div class="modal-overlay" id="modalOverlay" onclick="handleOverlayClick(event)">
-  <div class="modal" id="modalBox">
-    <button class="modal-close" onclick="closeModal()">✕</button>
-
-    <div id="orderForm">
-      <div class="modal-product">
-        <div class="modal-emoji" id="mEmoji">🎧</div>
-        <div>
-          <div class="modal-pname" id="mName">Product Name</div>
-          <div class="modal-pprice" id="mPrice">₹499</div>
-        </div>
-      </div>
-
-      <h2>📦 Complete Your Order</h2>
-
-      <div class="form-row">
-        <div class="form-group">
-          <label class="form-label">Full Name *</label>
-          <input class="form-input" id="fName" type="text" placeholder="Rahul Kumar"/>
-        </div>
-        <div class="form-group">
-          <label class="form-label">Mobile Number *</label>
-          <input class="form-input" id="fPhone" type="tel" maxlength="10" placeholder="9876543210"/>
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label class="form-label">Full Address *</label>
-        <textarea class="form-input" id="fAddress" rows="2" placeholder="House No, Street, Area, Landmark..."></textarea>
-      </div>
-
-      <div class="form-row">
-        <div class="form-group">
-          <label class="form-label">State *</label>
-          <select class="form-input" id="fState">
-            <option value="">-- Select State --</option>
-            <option>Andhra Pradesh</option>
-            <option>Arunachal Pradesh</option>
-            <option>Assam</option>
-            <option>Bihar</option>
-            <option>Chhattisgarh</option>
-            <option>Goa</option>
-            <option>Gujarat</option>
-            <option>Haryana</option>
-            <option>Himachal Pradesh</option>
-            <option>Jharkhand</option>
-            <option>Karnataka</option>
-            <option>Kerala</option>
-            <option>Madhya Pradesh</option>
-            <option>Maharashtra</option>
-            <option>Manipur</option>
-            <option>Meghalaya</option>
-            <option>Mizoram</option>
-            <option>Nagaland</option>
-            <option>Odisha</option>
-            <option>Punjab</option>
-            <option>Rajasthan</option>
-            <option>Sikkim</option>
-            <option>Tamil Nadu</option>
-            <option>Telangana</option>
-            <option>Tripura</option>
-            <option>Uttar Pradesh</option>
-            <option>Uttarakhand</option>
-            <option>West Bengal</option>
-            <option>Andaman and Nicobar Islands</option>
-            <option>Chandigarh</option>
-            <option>Dadra and Nagar Haveli and Daman and Diu</option>
-            <option>Delhi</option>
-            <option>Jammu and Kashmir</option>
-            <option>Ladakh</option>
-            <option>Lakshadweep</option>
-            <option>Puducherry</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label class="form-label">City *</label>
-          <input class="form-input" id="fCity" type="text" placeholder="Enter your city"/>
-        </div>
-      </div>
-
-      <div class="form-row">
-        <div class="form-group">
-          <label class="form-label">PIN Code *</label>
-          <input class="form-input" id="fPin" type="text" maxlength="6" placeholder="800001"/>
-        </div>
-        <div class="form-group">
-          <label class="form-label">Quantity</label>
-          <div class="qty-control">
-            <button class="qty-btn" onclick="changeQty(-1)">−</button>
-            <span class="qty-val" id="qtyVal">1</span>
-            <button class="qty-btn" onclick="changeQty(1)">+</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label class="form-label">Payment Method</label>
-        <select class="form-input" id="fPayment">
-          <option value="COD">Cash on Delivery (COD)</option>
-          <option value="UPI">UPI / Online Payment</option>
-        </select>
-      </div>
-
-      <div class="total-box">
-        <div>
-          <div class="total-label">Order Total</div>
-          <div style="font-size:11px;color:var(--muted);margin-top:2px;">Incl. free delivery</div>
-        </div>
-        <div class="total-amount" id="totalAmount">₹499</div>
-      </div>
-
-      <button class="btn-submit" id="placeBtn" onclick="submitOrder()">✅ Place Order</button>
-      <div class="cod-badge">🔒 Secure Order &nbsp;•&nbsp; Free Delivery &nbsp;•&nbsp; Easy Returns</div>
+<div class="modal-overlay" id="orderModal">
+  <div class="modal">
+    <div class="modal-header">
+      <h3><i class="fas fa-shopping-bag"></i> Complete order</h3>
+      <button class="modal-close" id="closeModalBtn">✕</button>
     </div>
-
-    <div class="success-screen" id="successScreen">
-      <div class="success-icon">🎉</div>
-      <div class="success-title">Order Placed!</div>
-      <div class="success-desc">Thank you! Your order has been received.<br>You will get a confirmation call within 24 hours.</div>
-      <div class="order-details" id="orderSummary"></div>
-      <button class="btn-close-success" onclick="closeModal()">Continue Shopping</button>
-    </div>
-
+    <div class="modal-body" id="modalDynamicArea"></div>
   </div>
 </div>
 
 <script>
-var currentProduct = {name:'',emoji:'',price:0};
-var qty = 1;
+const PRODUCTS = [
+  { id:1, name:"Premium Cotton Bedsheet", category:"Home", desc:"King size, 800 TC, breathable cotton", price:899, oldPrice:2299, mainImg:"https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=400&h=300&fit=crop", gallery:["https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=400&h=300&fit=crop","https://images.unsplash.com/photo-1612320643017-0b13d03e3f7b?w=400&h=300&fit=crop","https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?w=400&h=300&fit=crop"] },
+  { id:2, name:"Stainless Steel Tiffin", category:"Kitchen", desc:"3-layer, leak-proof, insulated lunchbox", price:449, oldPrice:1099, mainImg:"https://images.unsplash.com/photo-1585679099828-356b0d1e38e8?w=400&h=300&fit=crop", gallery:["https://images.unsplash.com/photo-1585679099828-356b0d1e38e8?w=400&h=300&fit=crop","https://images.unsplash.com/photo-1590794056226-79ef3a8147e1?w=400&h=300&fit=crop","https://images.unsplash.com/photo-1603190287605-e6c32fa0dccb?w=400&h=300&fit=crop"] },
+  { id:3, name:"Eco Yoga Mat", category:"Fitness", desc:"10mm non-slip, TPE material, carry bag", price:599, oldPrice:1499, mainImg:"https://images.unsplash.com/photo-1592432678016-e910b452f9a2?w=400&h=300&fit=crop", gallery:["https://images.unsplash.com/photo-1592432678016-e910b452f9a2?w=400&h=300&fit=crop","https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?w=400&h=300&fit=crop","https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&h=300&fit=crop"] },
+  { id:4, name:"Smart Wi-Fi LED Bulb", category:"Electronics", desc:"9W, RGB, voice & app control", price:349, oldPrice:999, mainImg:"https://images.unsplash.com/photo-1563299796-17596ed6b017?w=400&h=300&fit=crop", gallery:["https://images.unsplash.com/photo-1563299796-17596ed6b017?w=400&h=300&fit=crop","https://images.unsplash.com/photo-1550985616-10810253b84d?w=400&h=300&fit=crop","https://images.unsplash.com/photo-1551308077-5f5c9f0efb5d?w=400&h=300&fit=crop"] },
+  { id:5, name:"Travel Backpack 30L", category:"Accessories", desc:"Water resistant, USB port, laptop sleeve", price:1299, oldPrice:3299, mainImg:"https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=300&fit=crop", gallery:["https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=300&fit=crop","https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?w=400&h=300&fit=crop","https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=400&h=300&fit=crop"] },
+  { id:6, name:"Floral Bedsheet Combo", category:"Home", desc:"Double bed set with 2 pillow covers", price:749, oldPrice:1799, mainImg:"https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=400&h=300&fit=crop", gallery:["https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?w=400&h=300&fit=crop","https://images.unsplash.com/photo-1540518614846-7ededae35e5d?w=400&h=300&fit=crop","https://images.unsplash.com/photo-1612320643017-0b13d03e3f7b?w=400&h=300&fit=crop"] },
+  { id:7, name:"Ceramic Coffee Mug Set", category:"Kitchen", desc:"Set of 4, 350ml, matte finish", price:499, oldPrice:1299, mainImg:"https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?w=400&h=300&fit=crop", gallery:["https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?w=400&h=300&fit=crop","https://images.unsplash.com/photo-1572301977179-4b5b8f4b6a6c?w=400&h=300&fit=crop","https://images.unsplash.com/photo-1584225064785-c62a8b43d148?w=400&h=300&fit=crop"] },
+  { id:8, name:"Portable Bluetooth Speaker", category:"Electronics", desc:"10W, deep bass, 8hrs playtime", price:849, oldPrice:1999, mainImg:"https://images.unsplash.com/photo-1589003077984-894e133ddfab?w=400&h=300&fit=crop", gallery:["https://images.unsplash.com/photo-1589003077984-894e133ddfab?w=400&h=300&fit=crop","https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=400&h=300&fit=crop","https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=400&h=300&fit=crop"] },
+  { id:9, name:"Men's Cotton Kurta", category:"Fashion", desc:"Breathable cotton, regular fit, festive", price:699, oldPrice:1699, mainImg:"https://images.unsplash.com/photo-1597904644328-b88da2a5a39c?w=400&h=300&fit=crop", gallery:["https://images.unsplash.com/photo-1597904644328-b88da2a5a39c?w=400&h=300&fit=crop","https://images.unsplash.com/photo-1622415530238-d7c83cfc1ddb?w=400&h=300&fit=crop","https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=400&h=300&fit=crop"] },
+  { id:10, name:"Air Fryer (3.2L)", category:"Kitchen", desc:"1500W, non-stick, oil-free cooking", price:3499, oldPrice:6999, mainImg:"https://images.unsplash.com/photo-1611145692686-5adb3f218d70?w=400&h=300&fit=crop", gallery:["https://images.unsplash.com/photo-1611145692686-5adb3f218d70?w=400&h=300&fit=crop","https://images.unsplash.com/photo-1585515320310-259814833e5f?w=400&h=300&fit=crop","https://images.unsplash.com/photo-1624823183493-ed5832f48f18?w=400&h=300&fit=crop"] },
+  { id:11, name:"Memory Foam Pillow", category:"Home", desc:"Orthopedic, cooling gel, washable cover", price:799, oldPrice:1899, mainImg:"https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?w=400&h=300&fit=crop", gallery:["https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?w=400&h=300&fit=crop","https://images.unsplash.com/photo-1631049104888-0285d11bf618?w=400&h=300&fit=crop","https://images.unsplash.com/photo-1595521624992-48a59aef95b9?w=400&h=300&fit=crop"] },
+  { id:12, name:"LED Desk Lamp", category:"Electronics", desc:"Touch dimmer, USB port, eye-care", price:649, oldPrice:1599, mainImg:"https://images.unsplash.com/photo-1571716575239-2dcde4e804e2?w=400&h=300&fit=crop", gallery:["https://images.unsplash.com/photo-1571716575239-2dcde4e804e2?w=400&h=300&fit=crop","https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=400&h=300&fit=crop","https://images.unsplash.com/photo-1534073828943-f801091bb18c?w=400&h=300&fit=crop"] },
+  { id:13, name:"Women's Ethnic Jhumka", category:"Jewelry", desc:"Lightweight, antique gold finish", price:299, oldPrice:799, mainImg:"https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=400&h=300&fit=crop", gallery:["https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=400&h=300&fit=crop","https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=400&h=300&fit=crop","https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=400&h=300&fit=crop"] },
+  { id:14, name:"Stainless Water Bottle", category:"Lifestyle", desc:"750ml, vacuum insulated, leak-proof", price:399, oldPrice:999, mainImg:"https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=400&h=300&fit=crop", gallery:["https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=400&h=300&fit=crop","https://images.unsplash.com/photo-1523362628745-0c100150b504?w=400&h=300&fit=crop","https://images.unsplash.com/photo-1612459284970-e8f027596582?w=400&h=300&fit=crop"] },
+  { id:15, name:"Decorative Wall Clock", category:"Home Decor", desc:"12 inch, silent sweep, wooden finish", price:899, oldPrice:1899, mainImg:"https://images.unsplash.com/photo-1563861826100-9cb868fdbe1c?w=400&h=300&fit=crop", gallery:["https://images.unsplash.com/photo-1563861826100-9cb868fdbe1c?w=400&h=300&fit=crop","https://images.unsplash.com/photo-1507643179773-40e6f9ef0632?w=400&h=300&fit=crop","https://images.unsplash.com/photo-1526374965326-5b5c1c8e07d8?w=400&h=300&fit=crop"] }
+];
 
-function openOrder(name, emoji, price){
-  currentProduct = {name:name, emoji:emoji, price:price};
-  qty = 1;
-  document.getElementById('mName').textContent = name;
-  document.getElementById('mEmoji').textContent = emoji;
-  document.getElementById('mPrice').textContent = '₹' + price;
-  document.getElementById('qtyVal').textContent = 1;
-  document.getElementById('totalAmount').textContent = '₹' + price;
-  document.getElementById('orderForm').style.display = 'block';
-  document.getElementById('successScreen').style.display = 'none';
-  var btn = document.getElementById('placeBtn');
-  btn.disabled = false;
-  btn.textContent = '✅ Place Order';
-  document.getElementById('modalOverlay').classList.add('active');
+// FIX 1: All Indian states list
+const ALL_STATES = [
+  "Andhra Pradesh","Arunachal Pradesh","Assam","Bihar","Chhattisgarh",
+  "Delhi","Goa","Gujarat","Haryana","Himachal Pradesh","Jharkhand",
+  "Karnataka","Kerala","Madhya Pradesh","Maharashtra","Manipur",
+  "Meghalaya","Mizoram","Nagaland","Odisha","Punjab","Rajasthan",
+  "Sikkim","Tamil Nadu","Telangana","Tripura","Uttar Pradesh",
+  "Uttarakhand","West Bengal","Jammu & Kashmir","Ladakh","Other"
+];
+
+let currentProduct = null, currentQty = 1, currentGallery = [], activeImgIndex = 0;
+let activeCategory = "all", searchQuery = "";
+
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyD_XiOeKDKU1CvgxYx6kYFBlXWIbPNZksBtsDqTuuHNfhyhc3WsTTWXyKnR0HWmcWnLw/exec";
+
+function filterProducts() {
+  return PRODUCTS.filter(p => {
+    const matchCat = activeCategory === "all" || p.category === activeCategory;
+    const matchSearch = p.name.toLowerCase().includes(searchQuery.toLowerCase()) || p.desc.toLowerCase().includes(searchQuery.toLowerCase());
+    return matchCat && matchSearch;
+  });
+}
+
+function renderProductGrid() {
+  const grid = document.getElementById('productGrid');
+  if (!grid) return;
+  const filtered = filterProducts();
+  if (filtered.length === 0) {
+    grid.innerHTML = `<div style="grid-column:1/-1; text-align:center; padding:3rem; color:#a0aec0;"><i class="fas fa-box-open" style="font-size:2rem; display:block; margin-bottom:0.5rem;"></i>No products found 😢</div>`;
+    return;
+  }
+  grid.innerHTML = filtered.map(p => `
+    <div class="product-card" data-id="${p.id}">
+      <button class="share-btn" data-share-id="${p.id}"><i class="fas fa-share-alt"></i> Share</button>
+      <img class="product-img" src="${p.mainImg}" alt="${p.name}" loading="lazy">
+      <div class="product-info">
+        <div class="category-badge">${p.category}</div>
+        <div class="product-name">${p.name}</div>
+        <div class="product-desc">${p.desc}</div>
+        <div class="price-row">
+          <span class="current-price">₹${p.price}</span>
+          <span class="old-price">₹${p.oldPrice}</span>
+        </div>
+        <button class="btn-order" data-prod='${JSON.stringify(p)}'><i class="fas fa-shopping-cart"></i> Order Now</button>
+      </div>
+    </div>
+  `).join('');
+  document.querySelectorAll('.share-btn').forEach(btn => {
+    btn.addEventListener('click', e => { e.stopPropagation(); const id = parseInt(btn.dataset.shareId); shareProduct(PRODUCTS.find(p => p.id === id)); });
+  });
+  document.querySelectorAll('.btn-order').forEach(btn => {
+    btn.addEventListener('click', e => { e.stopPropagation(); openProductModal(JSON.parse(btn.dataset.prod)); });
+  });
+  document.querySelectorAll('.product-card').forEach(card => {
+    card.addEventListener('click', e => {
+      if (e.target.closest('.btn-order') || e.target.closest('.share-btn')) return;
+      openProductModal(PRODUCTS.find(p => p.id === parseInt(card.dataset.id)));
+    });
+  });
+}
+
+function shareProduct(product) {
+  const shareUrl = `${window.location.origin}${window.location.pathname}?product=${product.id}`;
+  if (navigator.share) {
+    navigator.share({ title: product.name, text: `Check out ${product.name} at just ₹${product.price} on BharatGrowTech!`, url: shareUrl }).catch(() => copyToClipboard(shareUrl, product.name));
+  } else {
+    copyToClipboard(shareUrl, product.name);
+  }
+}
+
+function copyToClipboard(url, name) {
+  navigator.clipboard.writeText(url).then(() => alert(`Link for "${name}" copied! Share it with friends.`)).catch(() => alert("Copy this link: " + url));
+}
+
+function buildStateOptions() {
+  return `<option value="">-- Select State --</option>` + ALL_STATES.map(s => `<option value="${s}">${s}</option>`).join('');
+}
+
+function openProductModal(product) {
+  if (!product) return;
+  currentProduct = product;
+  currentQty = 1;
+  currentGallery = product.gallery?.length ? product.gallery : [product.mainImg];
+  activeImgIndex = 0;
+  document.getElementById('modalDynamicArea').innerHTML = `
+    <div id="orderInterface">
+      <div class="gallery-section">
+        <img id="modalMainImg" class="main-gallery-img" src="${currentGallery[0]}" alt="${product.name}">
+        <div class="thumbnails" id="thumbContainer"></div>
+      </div>
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div><h3>${product.name}</h3><div class="price-row"><span class="current-price">₹${product.price}</span><span class="old-price">₹${product.oldPrice}</span></div></div>
+        <button id="modalShareBtn" style="background:rgba(230,177,126,0.2);border:none;padding:8px 12px;border-radius:40px;color:var(--accent-gold);cursor:pointer;font-family:'Inter',sans-serif;"><i class="fas fa-share-alt"></i> Share</button>
+      </div>
+      <p style="font-size:0.8rem;color:#a0aec0;margin-bottom:1rem;">${product.desc}</p>
+      <div class="form-group"><label class="form-label">Full Name</label><input class="form-input" id="fullName" placeholder="Ramesh Kumar"></div>
+      <div class="form-group"><label class="form-label">Mobile Number</label><input class="form-input" id="mobile" maxlength="10" placeholder="9876543210"></div>
+      <div class="form-group"><label class="form-label">Address (House No, Street, Landmark)</label><textarea class="form-input" id="address" rows="2"></textarea></div>
+      <div style="display:flex;gap:12px;">
+        <div class="form-group" style="flex:1"><label class="form-label">City</label><input class="form-input" id="city" placeholder="Patna"></div>
+        <div class="form-group" style="flex:1"><label class="form-label">State</label><select class="form-input" id="state">${buildStateOptions()}</select></div>
+      </div>
+      <div class="form-group"><label class="form-label">PIN Code</label><input class="form-input" id="pincode" maxlength="6" placeholder="800001"></div>
+      <div class="form-group"><label class="form-label">Quantity</label>
+        <div class="qty-selector"><button class="qty-btn" id="qtyMinus">−</button><span id="qtyVal" style="padding:0 12px;">1</span><button class="qty-btn" id="qtyPlus">+</button></div>
+      </div>
+      <div class="total-area"><span>Total (free shipping)</span><span id="totalAmountSpan" class="current-price" style="font-size:1.2rem;">₹${product.price}</span></div>
+      <button class="btn-submit" id="finalOrderBtn"><i class="fas fa-check"></i> Place Order</button>
+    </div>
+    <div id="successView" style="display:none;text-align:center;">
+      <i class="fas fa-check-circle" style="font-size:3.5rem;color:#e6b17e;"></i>
+      <h3 style="margin:0.5rem 0;">Order Confirmed!</h3>
+      <p>Your order has been placed. Our team will contact you within 6 hours.</p>
+      <div id="successSummary" style="background:#0f1629;border-radius:1rem;padding:0.8rem;margin:1rem 0;font-size:0.8rem;"></div>
+      <button class="btn-submit" id="closeSuccessBtn">Continue Shopping</button>
+    </div>
+  `;
+  const thumbContainer = document.getElementById('thumbContainer');
+  currentGallery.forEach((img, idx) => {
+    const thumb = document.createElement('img');
+    thumb.src = img; thumb.classList.add('thumb');
+    if (idx === 0) thumb.classList.add('active');
+    thumb.addEventListener('click', () => {
+      activeImgIndex = idx;
+      document.getElementById('modalMainImg').src = img;
+      document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+      thumb.classList.add('active');
+    });
+    thumbContainer.appendChild(thumb);
+  });
+  document.getElementById('modalShareBtn').onclick = () => shareProduct(product);
+  const qtySpan = document.getElementById('qtyVal');
+  const totalSpan = document.getElementById('totalAmountSpan');
+  const updateTotal = () => { totalSpan.innerText = `₹${currentProduct.price * currentQty}`; };
+  document.getElementById('qtyMinus').onclick = () => { if (currentQty > 1) { currentQty--; qtySpan.innerText = currentQty; updateTotal(); } };
+  document.getElementById('qtyPlus').onclick = () => { if (currentQty < 10) { currentQty++; qtySpan.innerText = currentQty; updateTotal(); } };
+  document.getElementById('finalOrderBtn').onclick = submitOrderOnlyCOD;
+  document.getElementById('orderModal').classList.add('active');
   document.body.style.overflow = 'hidden';
 }
 
-function closeModal(){
-  document.getElementById('modalOverlay').classList.remove('active');
-  document.body.style.overflow = '';
-  clearForm();
-}
-
-function handleOverlayClick(e){
-  if(e.target === document.getElementById('modalOverlay')) closeModal();
-}
-
-function changeQty(delta){
-  qty = Math.max(1, Math.min(10, qty + delta));
-  document.getElementById('qtyVal').textContent = qty;
-  document.getElementById('totalAmount').textContent = '₹' + (currentProduct.price * qty);
-}
-
-function clearForm(){
-  ['fName','fPhone','fAddress','fCity','fPin'].forEach(function(id){
-    document.getElementById(id).value = '';
-  });
-  document.getElementById('fState').selectedIndex = 0;
-  document.getElementById('fPayment').selectedIndex = 0;
-}
-
-function submitOrder(){
-  var name    = document.getElementById('fName').value.trim();
-  var phone   = document.getElementById('fPhone').value.trim();
-  var address = document.getElementById('fAddress').value.trim();
-  var city    = document.getElementById('fCity').value.trim();
-  var state   = document.getElementById('fState').value;
-  var pin     = document.getElementById('fPin').value.trim();
-  var payment = document.getElementById('fPayment').value;
-
-  if(!name || !phone || !address || !city || !state || !pin){
-    alert('Please fill all required fields marked with *');
-    return;
-  }
-  var phoneRegex = /^[6-9]\d{9}$/;
-  var allSame = /^(\d)\1{9}$/.test(phone);
-  if(!phoneRegex.test(phone) || allSame){
-    alert('Please enter a valid Indian mobile number (must start with 6, 7, 8 or 9 and not all same digits)');
-    return;
-  }
-  if(pin.length !== 6 || isNaN(pin)){
-    alert('Please enter a valid 6-digit PIN code');
-    return;
-  }
-
-  var orderId = 'BGT' + Date.now().toString().slice(-6);
-  var total = currentProduct.price * qty;
-
-  var btn = document.getElementById('placeBtn');
+async function submitOrderOnlyCOD() {
+  const name = document.getElementById('fullName').value.trim();
+  const mobile = document.getElementById('mobile').value.trim();
+  const address = document.getElementById('address').value.trim();
+  const city = document.getElementById('city').value.trim();
+  const state = document.getElementById('state').value;
+  const pincode = document.getElementById('pincode').value.trim();
+  if (!name || !mobile || !address || !city || !state || !pincode) { alert("Please fill all required fields"); return; }
+  if (!/^[6-9]\d{9}$/.test(mobile) || /^(\d)\1{9}$/.test(mobile)) { alert("Valid 10-digit Indian mobile number required"); return; }
+  if (!/^\d{6}$/.test(pincode)) { alert("Enter valid 6-digit PIN code"); return; }
+  const total = currentProduct.price * currentQty;
+  const orderId = "BGT" + Date.now().toString().slice(-7) + Math.floor(Math.random() * 1000);
+  const orderData = { orderId, product: currentProduct.name, name, phone: mobile, address, city, state, pin: pincode, quantity: currentQty, total: `₹${total}`, payment: "Cash on Delivery", timestamp: new Date().toISOString() };
+  const btn = document.getElementById('finalOrderBtn');
   btn.disabled = true;
-  btn.textContent = '⏳ Placing Order...';
-
-  // ── GOOGLE APPS SCRIPT INTEGRATION ──
-  var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyD_XiOeKDKU1CvgxYx6kYFBlXWIbPNZksBtsDqTuuHNfhyhc3WsTTWXyKnR0HWmcWnLw/exec';
-
-  fetch(SCRIPT_URL, {
-    method: 'POST',
-    mode: 'no-cors',
-    headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify({
-      orderId:  orderId,
-      product:  currentProduct.emoji + ' ' + currentProduct.name,
-      name:     name,
-      phone:    phone,
-      address:  address,
-      city:     city,
-      state:    state,
-      pin:      pin,
-      qty:      qty,
-      total:    '₹' + total,
-      payment:  payment
-    })
-  })
-  .then(function(){ showSuccess(orderId, name, phone, address, city, state, pin, payment, total); })
-  .catch(function(){ showSuccess(orderId, name, phone, address, city, state, pin, payment, total); });
+  btn.innerHTML = '<i class="fas fa-spinner fa-pulse"></i> Processing...';
+  try { await fetch(SCRIPT_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(orderData) }); } catch(e) {}
+  document.getElementById('orderInterface').style.display = 'none';
+  document.getElementById('successView').style.display = 'block';
+  document.getElementById('successSummary').innerHTML = `<strong>Order ID: ${orderId}</strong><br>${currentProduct.name} × ${currentQty}<br>Total: ₹${total}<br>Delivering to: ${name}, ${city}, ${state} – ${pincode}`;
+  document.getElementById('closeSuccessBtn').onclick = closeModal;
 }
 
-function showSuccess(orderId, name, phone, address, city, state, pin, payment, total){
-  document.getElementById('orderForm').style.display = 'none';
-  document.getElementById('successScreen').style.display = 'block';
-  document.getElementById('orderSummary').innerHTML =
-    '<span>Order ID</span> &nbsp; ' + orderId + '<br>' +
-    '<span>Product</span> &nbsp; ' + currentProduct.emoji + ' ' + currentProduct.name + '<br>' +
-    '<span>Quantity</span> &nbsp; ' + qty + '<br>' +
-    '<span>Total</span> &nbsp; ₹' + total + '<br>' +
-    '<span>Payment</span> &nbsp; ' + payment + '<br>' +
-    '<span>Name</span> &nbsp; ' + name + '<br>' +
-    '<span>Mobile</span> &nbsp; ' + phone + '<br>' +
-    '<span>Address</span> &nbsp; ' + address + ', ' + city + ', ' + state + ' - ' + pin;
+function closeModal() {
+  document.getElementById('orderModal').classList.remove('active');
+  document.body.style.overflow = '';
+  currentProduct = null;
 }
+
+window.addEventListener('DOMContentLoaded', () => {
+  renderProductGrid();
+  document.getElementById('searchInput').addEventListener('input', e => { searchQuery = e.target.value; renderProductGrid(); });
+  document.querySelectorAll('.cat-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeCategory = btn.dataset.cat;
+      renderProductGrid();
+    });
+  });
+  document.getElementById('closeModalBtn').addEventListener('click', closeModal);
+  document.getElementById('orderModal').addEventListener('click', e => { if (e.target === document.getElementById('orderModal')) closeModal(); });
+});
 </script>
 </body>
 </html>
